@@ -84,4 +84,17 @@ See `spec/SPECIFICATION.md` for the full contract.
 - `explain`: explain a policy or a change with citations
 - `ask`: answer policy questions from repo documents
 - `info`: summarize the repository and lifecycle metadata
+- `details`: show repository details, file coverage, and Git metadata
 
+## CLI Examples
+
+```bash
+# Basic repository summary
+policyagent info -d ./examples/minimal-policy-repo
+
+# Full repository details with file listings
+policyagent details -d ./examples/minimal-policy-repo
+
+# JSON output for scripting
+policyagent info -d ./examples/minimal-policy-repo --json
+```
