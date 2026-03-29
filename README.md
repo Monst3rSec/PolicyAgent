@@ -107,11 +107,66 @@ You can then run the CLI with:
 node dist/index.js --help
 ```
 
-If you want the command available as `policyagent` on your machine:
+## Direct CLI Command After Install
+
+If you want `policyagent` to work directly as a shell command, use one of these:
+
+### macOS
+
+```bash
+cd PolicyAgent
+npm install
+npm link
+policyagent --help
+```
+
+### Linux
+
+```bash
+cd PolicyAgent
+npm install
+npm link
+policyagent --help
+```
+
+### Windows PowerShell
+
+```powershell
+cd PolicyAgent
+npm install
+npm link
+policyagent --help
+```
+
+`npm link` is the best developer workflow because it makes the command available globally while pointing at your local checkout.
+
+If you want a full global install from the current source instead:
 
 ```bash
 npm install -g .
 policyagent --help
+```
+
+## Why `policyagent` Was Not Found
+
+This happened because `npm install` only installs dependencies for the repository. It does not add the package binary to your global shell path.
+
+Use one of these when you want direct CLI mode:
+
+```bash
+npm link
+```
+
+or:
+
+```bash
+npm install -g .
+```
+
+If you do not want a global command yet, use:
+
+```bash
+npm run cli -- --help
 ```
 
 ## CLI Examples

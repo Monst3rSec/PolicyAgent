@@ -3,13 +3,26 @@
   "version": "0.1.0",
   "description": "A git-native framework for policy authoring, explanation, and governance",
   "type": "module",
+  "files": [
+    "dist/",
+    "docs/",
+    "examples/",
+    "spec/",
+    "README.md"
+  ],
   "bin": {
     "policyagent": "./dist/index.js"
   },
   "scripts": {
-    "build": "tsc",
+    "clean": "rm -rf dist",
+    "build": "tsc && node scripts/make-bin-executable.mjs",
     "dev": "tsc --watch",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "cli": "node dist/index.js",
+    "prepare": "npm run build",
+    "prepack": "npm run build",
+    "postinstall": "node scripts/postinstall.mjs",
+    "link:dev": "npm link"
   },
   "keywords": [
     "policy",
@@ -24,6 +37,10 @@
   "engines": {
     "node": ">=18"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Monst3rSec/PolicyAgent.git"
+  },
   "dependencies": {
     "commander": "^12.1.0",
     "js-yaml": "^4.1.0"
@@ -34,4 +51,3 @@
     "typescript": "^5.7.0"
   }
 }
-
