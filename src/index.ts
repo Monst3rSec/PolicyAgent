@@ -8,6 +8,7 @@ import { mapCommand } from './commands/map.js';
 import { explainCommand } from './commands/explain.js';
 import { askCommand } from './commands/ask.js';
 import { infoCommand, detailsCommand } from './commands/info.js';
+import { interactionsCommand } from './commands/interactions.js';
 
 const program = new Command();
 
@@ -24,5 +25,6 @@ program.addCommand(explainCommand);
 program.addCommand(askCommand);
 program.addCommand(infoCommand);
 program.addCommand(detailsCommand);
+program.addCommand(interactionsCommand);
 
 program.parse();
