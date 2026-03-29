@@ -1,0 +1,10 @@
+# PolicyAgent CODEOWNERS
+
+* @your-org/policy-admins
+/policies/ @your-org/policy-reviewers
+/standards/ @your-org/policy-reviewers
+/procedures/ @your-org/policy-reviewers
+/controls/ @your-org/policy-reviewers
+/knowledge/ @your-org/policy-admins
+/evidence/ @your-org/policy-admins
+

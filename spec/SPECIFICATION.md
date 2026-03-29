@@ -21,6 +21,9 @@ my-policy-repo/
 ├── PURPOSE.md                # required repo purpose and scope
 ├── RULES.md                  # optional PolicyAgent behavior and safety rules
 ├── GOVERNANCE.md             # optional local governance rules
+├── .github/
+│   ├── CODEOWNERS            # reviewer ownership rules created during init
+│   └── pull_request_template.md
 ├── policies/                 # policy documents
 ├── controls/                 # control statements and mappings
 ├── standards/                # standards derived from policy
@@ -86,6 +89,26 @@ This file explains:
 - what policy domain it covers
 - who uses it
 - what is in scope and out of scope
+
+### `.github/CODEOWNERS`
+
+This file should be created during `policyagent init`.
+
+Its purpose is to:
+
+- automatically request reviewers for PRs
+- define ownership by folder
+- make reviewer routing part of the repository contract
+
+### `.github/pull_request_template.md`
+
+This file should also be created during `policyagent init`.
+
+Its purpose is to:
+
+- standardize change request information
+- make review expectations clear
+- help policy reviewers assess completeness
 
 ## 4. Core Repository Folders
 
@@ -192,7 +215,7 @@ PolicyAgent assumes:
 
 ### `policyagent init`
 
-Scaffold a repository matching this spec.
+Scaffold a repository matching this spec, including reviewer workflow files such as `.github/CODEOWNERS`.
 
 ### `policyagent validate`
 
@@ -217,4 +240,3 @@ Answer a question using repository documents.
 ### `policyagent info`
 
 Summarize repository structure and metadata.
-

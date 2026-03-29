@@ -31,6 +31,9 @@ my-policy-repo/
 ├── PURPOSE.md
 ├── RULES.md
 ├── GOVERNANCE.md
+├── .github/
+│   ├── CODEOWNERS
+│   └── pull_request_template.md
 ├── policies/
 ├── controls/
 ├── standards/
@@ -52,5 +55,6 @@ my-policy-repo/
 - `evidence/`: release notes, approvals, traceability material
 - `workflows/`: structured drafting and review flows
 - `agents/`: optional sub-agent definitions like drafter or mapper
+- `.github/CODEOWNERS`: automatic reviewer routing for policy changes
+- `.github/pull_request_template.md`: standard PR checklist for policy review
 - `.policyagent/`: local runtime state, ignored by Git
-

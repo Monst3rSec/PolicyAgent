@@ -191,7 +191,7 @@ policyagent interact -a anthropic -m explain -i policies/information-security-po
 ## Command Overview
 
 ```bash
-policyagent init
+policyagent init -d <repo> --owner @your-org/policy-admins --reviewer @your-org/policy-reviewers
 policyagent validate -d <repo>
 policyagent info -d <repo>
 policyagent details -d <repo>
@@ -201,3 +201,20 @@ policyagent explain -a <adapter> -f <file>
 policyagent ask -a <adapter> -q "<question>"
 policyagent interactions -a <adapter> -m <mode> -i "<input>" -d <repo>
 ```
+
+## Reviewer Setup During Init
+
+`policyagent init` now scaffolds reviewer workflow files automatically:
+
+- `.github/CODEOWNERS`
+- `.github/pull_request_template.md`
+
+Example:
+
+```bash
+policyagent init -d ./my-policy-repo \
+  --owner @company/policy-admins \
+  --reviewer @company/grc-team
+```
+
+This means each new repo starts with reviewer ownership and PR review guidance already in place.
