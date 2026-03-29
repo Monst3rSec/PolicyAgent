@@ -2,7 +2,7 @@
 
 PolicyAgent is a git-native framework for policy authoring, explanation, and governance.
 
-It follows the same separation of concerns that makes `gitagent` easy to understand:
+It follows the same separation of concerns that makes easy to understand:
 
 - `spec` = the policy repository contract
 - `src/commands` = CLI
