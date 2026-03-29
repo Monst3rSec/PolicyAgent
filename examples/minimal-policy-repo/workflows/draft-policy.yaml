@@ -1,0 +1,8 @@
+name: draft-policy
+description: Draft a new policy using repository context and an LLM adapter
+steps:
+  - collect_context
+  - generate_draft
+  - review_for_clarity
+  - open_pull_request
+

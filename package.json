@@ -1,0 +1,37 @@
+{
+  "name": "policyagent",
+  "version": "0.1.0",
+  "description": "A git-native framework for policy authoring, explanation, and governance",
+  "type": "module",
+  "bin": {
+    "policyagent": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "policy",
+    "governance",
+    "git",
+    "llm",
+    "compliance",
+    "controls",
+    "frameworks"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/js-yaml": "^4.0.9",
+    "typescript": "^5.7.0"
+  }
+}
+

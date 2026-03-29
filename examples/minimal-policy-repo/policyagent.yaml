@@ -1,0 +1,22 @@
+spec_version: "0.1.0"
+name: security-policy-repo
+version: 1.0.0
+description: Internal security policy repository
+owners:
+  - security-governance
+reviewers:
+  - risk-team
+adapters:
+  default: generic
+  enabled:
+    - generic
+    - openai
+    - anthropic
+policy_paths:
+  - policies
+  - standards
+  - procedures
+control_frameworks:
+  - iso-27001
+  - soc2
+

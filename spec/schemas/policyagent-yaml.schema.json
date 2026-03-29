@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://policyagent.local/policyagent-yaml.schema.json",
+  "title": "PolicyAgent Manifest",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "name",
+    "version",
+    "description"
+  ],
+  "properties": {
+    "spec_version": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "owners": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reviewers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "adapters": {
+      "type": "object"
+    },
+    "policy_paths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "control_frameworks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}
